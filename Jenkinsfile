@@ -28,10 +28,10 @@ pipeline {
             }
         }
 
-        stage('Package') {
-            steps {
-                bat 'tar -a -c -f python.zip app.py apptest.py requirements.txt'
-            }
-        }
+       stage('Package') {
+    steps {
+        bat 'powershell -Command "Compress-Archive -Path app.py, apptest.py, requirements.txt -DestinationPath python.zip -Force"'
+    }
+}
     }
 }
