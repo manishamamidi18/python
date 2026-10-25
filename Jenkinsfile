@@ -12,13 +12,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'python -m py_compile app.py test_app.py'
+                bat 'python -m py_compile app.py apptest.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'python -m unittest test_app -v'
+                bat 'python -m unittest apptest -v'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                bat 'tar -a -c -f python-cicd.zip app.py test_app.py requirements.txt'
+                bat 'tar -a -c -f python-cicd.zip app.py apptest.py requirements.txt'
             }
         }
     }
