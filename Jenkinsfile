@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/manishamamidi18/python-cicd.git'
+                    url: 'https://github.com/manishamamidi18/python.git'
             }
         }
 
