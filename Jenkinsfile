@@ -30,7 +30,7 @@ pipeline {
 
        stage('Package') {
     steps {
-        bat 'powershell -Command "Compress-Archive -Path app.py, apptest.py, requirements.txt -DestinationPath python.zip -Force"'
+        bat 'powershell -Command "Compress-Archive -Path app.py, apptest.py, requriments.txt -DestinationPath python.zip -Force"'
     }
 }
     }
