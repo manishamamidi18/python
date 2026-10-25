@@ -1,4 +1,4 @@
-```groovy
+
 pipeline {
     agent any
 
@@ -30,9 +30,8 @@ pipeline {
 
         stage('Package') {
             steps {
-                bat 'tar -a -c -f python-cicd.zip app.py apptest.py requirements.txt'
+                bat 'tar -a -c -f python.zip app.py apptest.py requirements.txt'
             }
         }
     }
 }
-```
